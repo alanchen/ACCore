@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D1FB757E-6736-4ABF-B9CB-EAC0675DD398</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ACDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>23E594CA-28D1-471A-83C5-93464733EE20</key>
+		<string>ssh://github.com/alanchen/ACCore.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ACDemo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>23E594CA-28D1-471A-83C5-93464733EE20</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/alanchen/ACCore.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>23E594CA-28D1-471A-83C5-93464733EE20</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>23E594CA-28D1-471A-83C5-93464733EE20</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ACDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
