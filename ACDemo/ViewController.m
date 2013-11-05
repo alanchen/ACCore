@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
+
+@property (nonatomic,strong)NSArray *array;
 
 @end
 
@@ -20,11 +23,13 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
+    _array = [NSArray arrayWithObjects:@"Hello" ,@"world",@"Hello world", @"Alan", @"What's up",@"Speech" ,@"AVSpeechSynthesizer",@"An AVSpeechUtterance is the basic unit of speech synthesis. An utterance encapsulates some amount of text to be spoken and a set of parameters affecting its speech: voice, pitch, rate, and delay.",nil];
+
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+-(NSInteger)tableView:(UITableView *)tableVieyw numberOfRowsInSection:(NSInteger)section
 {
-    return  10;
+    return  [_array count];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -36,7 +41,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainMenuListCell" forIndexPath:indexPath];
     NSDate *date = [NSDate date];
-    cell.textLabel.text = [NSString randomName];
+    cell.textLabel.text = [_array objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -45,6 +50,15 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString *str= [_array objectAtIndex:indexPath.row];
+    
+    
+    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:str];
+    utterance.rate= 0.2;
+    
+    AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+    [synth speakUtterance:utterance];
 }
 
 
