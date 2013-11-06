@@ -16,6 +16,9 @@
 #define ACDumpPoint(point)  NSLog(@"Point of %s = (%f, %f)",#point,point.x, point.y)
 #define ACDumpFunction      NSLog(@"%s",__PRETTY_FUNCTION__)
 
+#define ACPrintLine         NSLog(@"=============================================================");
+#define ACPrintNextLine     NSLog(@"\n");
+
 ///////////////////   Notification  //////////////////////////
 
 #define NotificationAdd(target,action,notiname,withobject) [[NSNotificationCenter defaultCenter] addObserver:target selector:action name:notiname object:withobject]

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DF9F84D5FB554C0881B7CDDA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD9DCE534DF4DAF83CDF51C /* libPods.a */; };
 		E76B0B28182A236B0019BA4E /* ACPlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B0B27182A236B0019BA4E /* ACPlistManager.m */; };
+		E76B0B30182A8DE30019BA4E /* ACAddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B0B2F182A8DE30019BA4E /* ACAddressBookModel.m */; };
+		E76B0B33182AB3D80019BA4E /* ACAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B0B32182AB3D80019BA4E /* ACAddressBookManager.m */; };
 		E76DA520182240D2008FC0CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76DA51F182240D2008FC0CA /* Foundation.framework */; };
 		E76DA522182240D2008FC0CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76DA521182240D2008FC0CA /* CoreGraphics.framework */; };
 		E76DA524182240D2008FC0CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76DA523182240D2008FC0CA /* UIKit.framework */; };
@@ -53,6 +55,10 @@
 		5B1CD0DE98F64F579B14EF76 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E76B0B26182A236B0019BA4E /* ACPlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPlistManager.h; sourceTree = "<group>"; };
 		E76B0B27182A236B0019BA4E /* ACPlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPlistManager.m; sourceTree = "<group>"; };
+		E76B0B2E182A8DE20019BA4E /* ACAddressBookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAddressBookModel.h; sourceTree = "<group>"; };
+		E76B0B2F182A8DE30019BA4E /* ACAddressBookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAddressBookModel.m; sourceTree = "<group>"; };
+		E76B0B31182AB3D80019BA4E /* ACAddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAddressBookManager.h; sourceTree = "<group>"; };
+		E76B0B32182AB3D80019BA4E /* ACAddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAddressBookManager.m; sourceTree = "<group>"; };
 		E76DA51C182240D2008FC0CA /* ACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76DA51F182240D2008FC0CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E76DA521182240D2008FC0CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,9 +132,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E76B0B29182A8B320019BA4E /* AddressBook */ = {
+		E76B0B2D182A8DA30019BA4E /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				E76B0B31182AB3D80019BA4E /* ACAddressBookManager.h */,
+				E76B0B32182AB3D80019BA4E /* ACAddressBookManager.m */,
+				E76B0B2E182A8DE20019BA4E /* ACAddressBookModel.h */,
+				E76B0B2F182A8DE30019BA4E /* ACAddressBookModel.m */,
 			);
 			path = AddressBook;
 			sourceTree = "<group>";
@@ -332,7 +342,7 @@
 		E76DA56918224224008FC0CA /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				E76B0B29182A8B320019BA4E /* AddressBook */,
+				E76B0B2D182A8DA30019BA4E /* AddressBook */,
 				E76DA56A18224224008FC0CA /* ACDevTools.h */,
 				E76DA56B18224224008FC0CA /* ACDevTools.m */,
 				E76B0B26182A236B0019BA4E /* ACPlistManager.h */,
@@ -477,8 +487,10 @@
 				E76DA539182240D3008FC0CA /* ViewController.m in Sources */,
 				E76DA57E182387ED008FC0CA /* UIView+Position.m in Sources */,
 				E76DA56D18224224008FC0CA /* UIColor+NewColor.m in Sources */,
+				E76B0B33182AB3D80019BA4E /* ACAddressBookManager.m in Sources */,
 				E76DA530182240D3008FC0CA /* AppDelegate.m in Sources */,
 				E76DA574182253B7008FC0CA /* NSDate+Display.m in Sources */,
+				E76B0B30182A8DE30019BA4E /* ACAddressBookModel.m in Sources */,
 				E76DA57B1823863F008FC0CA /* UIButton+Common.m in Sources */,
 				E76DA571182245B9008FC0CA /* NSDate+Comparison.m in Sources */,
 				E76DA581182388B5008FC0CA /* UIView+Common.m in Sources */,
