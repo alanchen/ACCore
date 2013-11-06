@@ -9,6 +9,7 @@
 
 #import "ACMacros.h"
 #import "ACDevTools.h"
+#import "ACPlistManager.h"
 
 #import "NSArray+ACComon.h"
 
