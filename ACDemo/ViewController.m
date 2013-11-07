@@ -24,7 +24,18 @@
     
     
     _array = [NSArray arrayWithObjects:@"Hello" ,@"world",@"Hello world", @"Alan", @"What's up",@"Speech" ,@"AVSpeechSynthesizer",@"An AVSpeechUtterance is the basic unit of speech synthesis. An utterance encapsulates some amount of text to be spoken and a set of parameters affecting its speech: voice, pitch, rate, and delay.",nil];
+    
+    [self httpTesting];
+}
 
+-(void)httpTesting
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://162.243.45.45/api/blog/?latlng=25.0396556%2C121.55261480000001" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 -(NSInteger)tableView:(UITableView *)tableVieyw numberOfRowsInSection:(NSInteger)section
@@ -40,7 +51,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainMenuListCell" forIndexPath:indexPath];
-    NSDate *date = [NSDate date];
+//    NSDate *date = [NSDate date];
     cell.textLabel.text = [_array objectAtIndex:indexPath.row];
     
     return cell;

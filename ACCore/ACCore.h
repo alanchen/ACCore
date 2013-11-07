@@ -9,6 +9,8 @@
 
 #import "ACMacros.h"
 #import "ACDevTools.h"
+#import "ACPlistManager.h"
+#import "ACAddressBookManager.h"
 
 #import "NSArray+ACComon.h"
 
