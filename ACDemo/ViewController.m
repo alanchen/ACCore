@@ -24,9 +24,11 @@
     
     
     _array = [NSArray arrayWithObjects:@"Hello" ,@"world",@"Hello world", @"Alan", @"What's up",@"Speech" ,@"AVSpeechSynthesizer",@"An AVSpeechUtterance is the basic unit of speech synthesis. An utterance encapsulates some amount of text to be spoken and a set of parameters affecting its speech: voice, pitch, rate, and delay.",nil];
+    
+    [self httpTesting];
 }
 
--(void)test
+-(void)httpTesting
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:@"http://162.243.45.45/api/blog/?latlng=25.0396556%2C121.55261480000001" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -34,30 +36,6 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
-    
-    
-    
-    NSURLSessionConfiguration  * defaultConfigObject  =  [ NSURLSessionConfiguration  defaultSessionConfiguration ];
-    NSString  * cachePath  =  @"/MyCacheDirectory" ;
-//    NSArray  * myPathList  =  NSSearchPathForDirectoriesInDomains ( NSCachesDirectory ,  NSUserDomainMask ,  YES );
-//    NSString  * myPath     =  [ myPathList   objectAtIndex: 0 ];
-//    NSString  * bundleIdentifier  =  [[ NSBundle  mainBundle ]  bundleIdentifier ];
-//    NSString  * fullCachePath  =  [[ myPath  stringByAppendingPathComponent: bundleIdentifier ]  stringByAppendingPathComponent: cachePath ];
-    NSURLCache  * myCache  =  [[ NSURLCache  alloc ]  initWithMemoryCapacity :  16384  diskCapacity:  268435456  diskPath:  cachePath ];
-    defaultConfigObject . URLCache  =  myCache ;
-    
-    NSURLSession  * delegateFreeSession  =  [ NSURLSession  sessionWithConfiguration:  defaultConfigObject  delegate:  nil  delegateQueue:  [ NSOperationQueue  mainQueue ]];
-    
-    [[ delegateFreeSession  dataTaskWithURL:  [ NSURL  URLWithString:  @"http://162.243.45.45/api/blog/?latlng=25.0396556%2C121.55261480000001" ]
-                          completionHandler: ^ ( NSData  * data ,  NSURLResponse  * response ,
-                                                NSError  * error )  {
-                              NSLog ( @"Got response %@ with error %@. \n " ,  response ,  error );
-                              NSLog ( @"DATA: \n %@ \n END DATA \n " ,
-                                     [[ NSString  alloc ]  initWithData:  data
-                                                               encoding:  NSUTF8StringEncoding ]);
-                          }]  resume ];
-
-
 }
 
 -(NSInteger)tableView:(UITableView *)tableVieyw numberOfRowsInSection:(NSInteger)section
