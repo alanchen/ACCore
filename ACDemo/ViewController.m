@@ -30,12 +30,16 @@
 
 -(void)httpTesting
 {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://162.243.45.45/api/blog/?latlng=25.0396556%2C121.55261480000001" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    [manager GET:@"http://162.243.45.45/api/blog/?latlng=25.0396556%2C121.55261480000001" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        id list = [ACModelParser parse:[responseObject objectForKey:@"response"] toClass:[FMModel class]];
+//        [list enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//            FMModel*model = obj;
+//             NSLog(@"%@", model.title);
+//        }];
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"Error: %@", error);
+//    }];
 }
 
 -(NSInteger)tableView:(UITableView *)tableVieyw numberOfRowsInSection:(NSInteger)section

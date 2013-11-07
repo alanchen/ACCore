@@ -11,6 +11,7 @@
 #import "ACDevTools.h"
 #import "ACPlistManager.h"
 #import "ACAddressBookManager.h"
+#import "ACModelParser.h"
 
 #import "NSArray+ACComon.h"
 
