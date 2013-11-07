@@ -26,6 +26,20 @@
     _array = [NSArray arrayWithObjects:@"Hello" ,@"world",@"Hello world", @"Alan", @"What's up",@"Speech" ,@"AVSpeechSynthesizer",@"An AVSpeechUtterance is the basic unit of speech synthesis. An utterance encapsulates some amount of text to be spoken and a set of parameters affecting its speech: voice, pitch, rate, and delay.",nil];
     
     [self httpTesting];
+    
+    [[ACGPSManager sharedInstance] startUpdatingLocation];
+    NotificationAdd(self, @selector(gpsSuccess:), GPSManagerNotificationDidUpdate, nil);
+    NotificationAdd(self, @selector(gpsFailed:), GPSManagerNotificationDidFail, nil);
+}
+
+-(void)gpsSuccess:(NSNotification *)noti
+{
+    ACDumpObj(noti.object);
+}
+
+-(void)gpsFailed:(NSNotification *)noti
+{
+    ACDumpObj(noti.object);
 }
 
 -(void)httpTesting

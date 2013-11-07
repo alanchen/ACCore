@@ -12,6 +12,7 @@
 #import "ACPlistManager.h"
 #import "ACAddressBookManager.h"
 #import "ACModelParser.h"
+#import "ACGPSManager.h"
 
 #import "NSArray+ACComon.h"
 
