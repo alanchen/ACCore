@@ -10,7 +10,7 @@
 
 @implementation ACPlistManager
 
-+(id)sharedInstance
++(ACPlistManager *)sharedInstance
 {
     static ACPlistManager *sharedInstance = nil;
     static dispatch_once_t onceToken;

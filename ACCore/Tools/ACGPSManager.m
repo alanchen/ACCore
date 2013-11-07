@@ -13,7 +13,7 @@
 
 @implementation ACGPSManager
 
-+(id)sharedInstance
++(ACGPSManager *)sharedInstance
 {
     static ACGPSManager *sharedInstance = nil;
     static dispatch_once_t onceToken;

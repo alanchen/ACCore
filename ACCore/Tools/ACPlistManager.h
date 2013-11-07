@@ -10,7 +10,7 @@
 
 @interface ACPlistManager : NSObject
 
-+(id)sharedInstance;
++(ACPlistManager *)sharedInstance;
 -(NSArray *)allExistedFiles;
 
 -(BOOL) writeObject:(id)obj toPlist:(NSString*)plistName;
