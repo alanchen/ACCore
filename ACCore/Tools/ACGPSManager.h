@@ -17,6 +17,9 @@ static NSString *GPSManagerNotificationDidFail      = @"GPSManagerNotificationDi
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *bestEffortAtLocation;
 
+@property (nonatomic,readonly) float bestLatitude;
+@property (nonatomic,readonly) float bestLongitude;
+
 +(id)sharedInstance;
 +(BOOL)isAccessible;
 

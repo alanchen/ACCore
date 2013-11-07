@@ -45,6 +45,16 @@
     return self;
 }
 
+-(float)bestLatitude
+{
+    return self.bestEffortAtLocation.coordinate.latitude;
+}
+
+-(float)bestLongitude
+{
+    return self.bestEffortAtLocation.coordinate.longitude;
+}
+
 -(void)startUpdatingLocation
 {
     [self.locationManager startUpdatingLocation];
