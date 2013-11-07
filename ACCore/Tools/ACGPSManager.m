@@ -111,13 +111,13 @@
                 break;
                 
             default:
-                [errorString appendFormat:@"%@ %ld\n", @"GenericLocationError", [error code]];
+                [errorString appendFormat:@"%@ %ld\n", @"GenericLocationError", (long)[error code]];
                 break;
         }
     }
     else
     {
-        [errorString appendFormat:@"Error domain: \"%@\"  Error code: %ld\n", [error domain], [error code]];
+        [errorString appendFormat:@"Error domain: \"%@\"  Error code: %ld\n", [error domain], (long)[error code]];
         [errorString appendFormat:@"Description: \"%@\"\n", [error localizedDescription]];
     }
     
