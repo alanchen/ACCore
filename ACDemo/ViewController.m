@@ -8,10 +8,11 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "FMDatabase.h"
 
 @interface ViewController ()
 
-@property (nonatomic,strong)NSArray *array;
+@property (nonatomic,strong)NSMutableArray *array;
 
 @end
 
@@ -23,9 +24,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
-    _array = [NSArray arrayWithObjects:@"Hello" ,@"world",@"Hello world", @"Alan", @"What's up",@"Speech" ,@"AVSpeechSynthesizer",@"An AVSpeechUtterance is the basic unit of speech synthesis. An utterance encapsulates some amount of text to be spoken and a set of parameters affecting its speech: voice, pitch, rate, and delay.",nil];
+    _array = [NSMutableArray arrayWithObjects:@"Hello" ,@"world",@"Hello world", @"Alan", @"What's up",@"Speech" ,@"AVSpeechSynthesizer",@"An AVSpeechUtterance is the basic unit of speech synthesis. An utterance encapsulates some amount of text to be spoken and a set of parameters affecting its speech: voice, pitch, rate, and delay.",nil];
     
-    [self httpTesting];
+    [self databaseTesting];
     
     [[ACGPSManager sharedInstance] startUpdatingLocation];
     NotificationAdd(self, @selector(gpsSuccess:), GPSManagerNotificationDidUpdate, nil);
@@ -42,18 +43,23 @@
     ACDumpObj(noti.object);
 }
 
--(void)httpTesting
+-(void)databaseTesting
 {
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    [manager GET:@"http://162.243.45.45/api/blog/?latlng=25.0396556%2C121.55261480000001" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        id list = [ACModelParser parse:[responseObject objectForKey:@"response"] toClass:[FMModel class]];
-//        [list enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//            FMModel*model = obj;
-//             NSLog(@"%@", model.title);
-//        }];
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Error: %@", error);
-//    }];
+    NSString *dbPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"vocabulary.db"];
+    FMDatabase* db = [FMDatabase databaseWithPath:dbPath];
+    
+    if (![db open]) {
+        NSLog(@"Could not open db");}
+    
+    FMResultSet *rs = [db executeQuery:@"SELECT * FROM toefl"];
+    
+    while ([rs next]) {
+        [_array addObject:[rs stringForColumn:@"word"]]; }
+    
+    [rs close];
+    [db close];
+    
+    [self.tableView reloadData];
 }
 
 -(NSInteger)tableView:(UITableView *)tableVieyw numberOfRowsInSection:(NSInteger)section
@@ -81,7 +87,6 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSString *str= [_array objectAtIndex:indexPath.row];
-    
     
     AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:str];
     utterance.rate= 0.2;
