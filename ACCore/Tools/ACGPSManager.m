@@ -57,6 +57,8 @@
 
 -(void)startUpdatingLocation
 {
+    self.bestEffortAtLocation = nil;
+    
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopUpdatingBecauseOfTimeout) object:nil];
     
     if(self.timeout){
