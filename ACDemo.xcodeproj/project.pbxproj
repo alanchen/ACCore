@@ -37,6 +37,8 @@
 		E76DA581182388B5008FC0CA /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E76DA580182388B5008FC0CA /* UIView+Common.m */; };
 		E76DA584182389BD008FC0CA /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E76DA583182389BD008FC0CA /* UIViewController+NavigationBar.m */; };
 		E76DA58718238AAD008FC0CA /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E76DA58618238AAD008FC0CA /* UIViewController+Common.m */; };
+		E792089A1830DEBD00B8D758 /* vocabulary.db in Resources */ = {isa = PBXBuildFile; fileRef = E79208991830DEBD00B8D758 /* vocabulary.db */; };
+		E792089C1830FDC500B8D758 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E792089B1830FDC500B8D758 /* libsqlite3.dylib */; };
 		E7BBB76E18289FB3000AA36D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBB76D18289FB3000AA36D /* AVFoundation.framework */; };
 		E7F5CC1B182B8A02001B93A1 /* ACModelParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F5CC1A182B8A02001B93A1 /* ACModelParser.m */; };
 		E7F5CC2D182BFD56001B93A1 /* ACGPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F5CC2C182BFD56001B93A1 /* ACGPSManager.m */; };
@@ -106,6 +108,8 @@
 		E76DA583182389BD008FC0CA /* UIViewController+NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationBar.m"; sourceTree = "<group>"; };
 		E76DA58518238AAD008FC0CA /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
 		E76DA58618238AAD008FC0CA /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
+		E79208991830DEBD00B8D758 /* vocabulary.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = vocabulary.db; sourceTree = "<group>"; };
+		E792089B1830FDC500B8D758 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E7BBB76D18289FB3000AA36D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E7F5CC19182B8A02001B93A1 /* ACModelParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACModelParser.h; sourceTree = "<group>"; };
 		E7F5CC1A182B8A02001B93A1 /* ACModelParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACModelParser.m; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E792089C1830FDC500B8D758 /* libsqlite3.dylib in Frameworks */,
 				E7F5CC2F182C01EF001B93A1 /* CoreLocation.framework in Frameworks */,
 				E7BBB76E18289FB3000AA36D /* AVFoundation.framework in Frameworks */,
 				E76DA522182240D2008FC0CA /* CoreGraphics.framework in Frameworks */,
@@ -175,6 +180,7 @@
 		E76DA51E182240D2008FC0CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E792089B1830FDC500B8D758 /* libsqlite3.dylib */,
 				E7F5CC2E182C01EF001B93A1 /* CoreLocation.framework */,
 				E7BBB76D18289FB3000AA36D /* AVFoundation.framework */,
 				E76DA51F182240D2008FC0CA /* Foundation.framework */,
@@ -196,6 +202,7 @@
 				E76DA534182240D3008FC0CA /* Main_iPad.storyboard */,
 				E76DA537182240D3008FC0CA /* ViewController.h */,
 				E76DA538182240D3008FC0CA /* ViewController.m */,
+				E79208991830DEBD00B8D758 /* vocabulary.db */,
 				E76DA53A182240D3008FC0CA /* Images.xcassets */,
 				E76DA526182240D2008FC0CA /* Supporting Files */,
 			);
@@ -447,6 +454,7 @@
 				E76DA53B182240D3008FC0CA /* Images.xcassets in Resources */,
 				E76DA533182240D3008FC0CA /* Main_iPhone.storyboard in Resources */,
 				E76DA52A182240D2008FC0CA /* InfoPlist.strings in Resources */,
+				E792089A1830DEBD00B8D758 /* vocabulary.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
