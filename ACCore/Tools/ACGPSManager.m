@@ -39,8 +39,8 @@
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
         
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; //kCLLocationAccuracyBestForNavigation;
-        self.locationManager.distanceFilter = 5;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters; //kCLLocationAccuracyBestForNavigation;
+        self.locationManager.distanceFilter = 10;
     }
     return self;
 }
@@ -57,12 +57,24 @@
 
 -(void)startUpdatingLocation
 {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopUpdatingBecauseOfTimeout) object:nil];
+    
+    if(self.timeout){
+        [self performSelector:@selector(stopUpdatingBecauseOfTimeout) withObject:nil afterDelay:self.timeout];
+    }
+    
     [self.locationManager startUpdatingLocation];
 }
 
 -(void)stopUpdatingLocation
 {
     [self.locationManager stopUpdatingLocation];
+}
+
+-(void)stopUpdatingBecauseOfTimeout
+{
+    [self.locationManager stopUpdatingLocation];
+    NotificationPost(GPSManagerNotificationDidUpdate, self.bestEffortAtLocation);
 }
 
 #pragma mark -  CLLocationManager Delegate

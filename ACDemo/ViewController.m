@@ -28,6 +28,7 @@
     
     [self databaseTesting];
     
+    [ACGPSManager sharedInstance].timeout = 5;
     [[ACGPSManager sharedInstance] startUpdatingLocation];
     NotificationAdd(self, @selector(gpsSuccess:), GPSManagerNotificationDidUpdate, nil);
     NotificationAdd(self, @selector(gpsFailed:), GPSManagerNotificationDidFail, nil);

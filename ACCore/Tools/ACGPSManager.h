@@ -16,6 +16,7 @@ static NSString *GPSManagerNotificationDidFail      = @"GPSManagerNotificationDi
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *bestEffortAtLocation;
+@property (nonatomic) float timeout ; // 0 is no timeout , default is  0.
 
 @property (nonatomic,readonly) float bestLatitude;
 @property (nonatomic,readonly) float bestLongitude;
