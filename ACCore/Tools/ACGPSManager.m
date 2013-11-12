@@ -9,6 +9,9 @@
 #import "ACGPSManager.h"
 
 @interface ACGPSManager()<CLLocationManagerDelegate>
+{
+    NSTimer *_timer;
+}
 @end
 
 @implementation ACGPSManager
@@ -42,6 +45,7 @@
         self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters; //kCLLocationAccuracyBestForNavigation;
         self.locationManager.distanceFilter = 10;
     }
+    
     return self;
 }
 
@@ -59,24 +63,37 @@
 {
     self.bestEffortAtLocation = nil;
     
-    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopUpdatingBecauseOfTimeout) object:nil];
-    
-    if(self.timeout){
-        [self performSelector:@selector(stopUpdatingBecauseOfTimeout) withObject:nil afterDelay:self.timeout];
-    }
-    
+    [self stopUpdatingLocation];
     [self.locationManager startUpdatingLocation];
+    
+    if([ACGPSManager isAccessible]){
+        [self launchTimeoutTimer];
+    }
 }
 
 -(void)stopUpdatingLocation
 {
+    [_timer invalidate];
+    _timer = nil;
     [self.locationManager stopUpdatingLocation];
 }
+                  
+#pragma mark - Timer
 
--(void)stopUpdatingBecauseOfTimeout
+-(void)launchTimeoutTimer
 {
-    [self.locationManager stopUpdatingLocation];
-    NotificationPost(GPSManagerNotificationDidUpdate, self.bestEffortAtLocation);
+    if(self.timeout)
+    {
+        [_timer invalidate];
+        _timer = nil;
+        _timer = [NSTimer scheduledTimerWithTimeInterval:self.timeout target:self selector:@selector(timeoutTrigger) userInfo:nil repeats:NO];
+    }
+}
+
+-(void)timeoutTrigger
+{
+    [self stopUpdatingLocation];
+    NotificationPost(GPSManagerNotificationDidTimeout, self.bestEffortAtLocation);
 }
 
 #pragma mark -  CLLocationManager Delegate
@@ -84,6 +101,10 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *newLocation = [locations lastObject];
+    
+    if(_timer==nil){  // ensure timeout is workable
+        [self launchTimeoutTimer];
+    }
     
     // test that the horizontal accuracy does not indicate an invalid measurement
     if (newLocation.horizontalAccuracy < 0)
@@ -101,6 +122,8 @@
         self.bestEffortAtLocation = newLocation;
     }
     
+     NSLog(@"GPS new Location : %@  horizontalAccuracy%f", newLocation, newLocation.horizontalAccuracy);
+    
     // test the measurement to see if it meets the desired accuracy
     // IMPORTANT!!! kCLLocationAccuracyBest should not be used for comparison with location coordinate or altitidue
     // accuracy because it is a negative value. Instead, compare against some predetermined "real" measure of
@@ -109,12 +132,9 @@
         
         // we have a measurement that meets our requirements, so we can stop updating the location
         // IMPORTANT!!! Minimize power usage by stopping the location manager as soon as possible.
-        [self.locationManager stopUpdatingLocation];
-        
+        [self stopUpdatingLocation];
         NotificationPost(GPSManagerNotificationDidUpdate, newLocation);
     }
-    
-    NSLog(@"GPS new Location : %@  horizontalAccuracy%f", newLocation, newLocation.horizontalAccuracy);
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -146,6 +166,7 @@
     }
     
     NSLog(@"GPS Error : %@",errorString);
+    [self stopUpdatingLocation];
     NotificationPost(GPSManagerNotificationDidFail, error);
 }
 

@@ -32,16 +32,25 @@
     [[ACGPSManager sharedInstance] startUpdatingLocation];
     NotificationAdd(self, @selector(gpsSuccess:), GPSManagerNotificationDidUpdate, nil);
     NotificationAdd(self, @selector(gpsFailed:), GPSManagerNotificationDidFail, nil);
+    NotificationAdd(self, @selector(gpsTimeout:), GPSManagerNotificationDidTimeout, nil);
 }
 
 -(void)gpsSuccess:(NSNotification *)noti
 {
-    ACDumpObj(noti.object);
+    id success = noti.object;
+    ACDumpObj(success);
 }
 
 -(void)gpsFailed:(NSNotification *)noti
 {
-    ACDumpObj(noti.object);
+    id failed = noti.object;
+    ACDumpObj(failed);
+}
+
+-(void)gpsTimeout:(NSNotification *)noti
+{
+    id timeout = noti.object;
+    ACDumpObj(timeout);
 }
 
 -(void)databaseTesting
