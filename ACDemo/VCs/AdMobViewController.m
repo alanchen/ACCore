@@ -10,9 +10,10 @@
 #import "GADBannerView.h"
 #import "GADInterstitial.h"
 
-@interface AdMobViewController ()<UITableViewDataSource,UITableViewDelegate,GADBannerViewDelegate>
+@interface AdMobViewController ()<UITableViewDataSource,UITableViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate>
 {
     GADBannerView *bannerView_;
+    GADInterstitial *interstitial_;
 }
 
 @property(nonatomic,strong)IBOutlet UITableView *tableView;
@@ -29,7 +30,7 @@
     
     _array = [NSMutableArray array];
     for(int i= 0 ;i<50;i++){
-        [_array addObject:@"AdgMob"];}
+        [_array addObject:@"AdMob"];}
     
     self.tableView =[[UITableView alloc] initWithFrame:self.view.frame];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
@@ -37,8 +38,8 @@
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    
-     [self admobTesting];
+    [self admobTesting];
+    [self admobTesting2];
 }
 
 -(void)admobTesting
@@ -64,6 +65,21 @@
     [bannerView_ loadRequest:request];
 }
 
+-(void)admobTesting2
+{
+    interstitial_ = [[GADInterstitial alloc] init];
+    interstitial_.adUnitID = @"a152847e82f22d8";
+    
+    GADRequest *request = [GADRequest request];
+    request.testDevices = [NSArray arrayWithObjects:
+                           GAD_SIMULATOR_ID,
+                           @"c3a9ad3b80cc93e9d2d23b840b6e72d9a1f209cc",
+                           nil];
+    
+    [interstitial_ loadRequest:request];
+    interstitial_.delegate = self;
+}
+
 #pragma mark - adDelegate
 
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
@@ -74,6 +90,11 @@
                                   bannerView.frame.size.width,
                                   bannerView.frame.size.height);
     [UIView commitAnimations];
+}
+
+- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial
+{
+     [interstitial_ presentFromRootViewController:self];
 }
 
 #pragma mark - table

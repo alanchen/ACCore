@@ -13,6 +13,7 @@
 #import "TestingViewController.h"
 #import "GPSViewController.h"
 #import "FMDBViewController.h"
+#import "VponViewController.h"
 
 @interface ViewController ()
 
@@ -25,8 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"ACDemo";
     
-    _array = [NSMutableArray arrayWithObjects:@"Test" ,@"GPS",@"FMDB", @"ADMob",nil];
+    _array = [NSMutableArray arrayWithObjects:@"Test" ,@"GPS",@"FMDB", @"ADMob",@"Vpon",nil];
 }
 
 -(void)speak:(NSString *)str
@@ -83,6 +85,11 @@
     else if(indexPath.row ==3)
     {
         AdMobViewController *vc= [[AdMobViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if(indexPath.row ==4)
+    {
+        VponViewController *vc= [[VponViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 

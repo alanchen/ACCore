@@ -21,9 +21,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
+    
+    self.title  = @"Test";
+    
     _array = [NSMutableArray array];
-    for(int i= 0 ;i<50;i++){
+    for(int i= 0 ;i<20;i++){
         [_array addObject:@"test"];}
     
     self.tableView =[[UITableView alloc] initWithFrame:self.view.frame];

@@ -48,6 +48,16 @@
 		E78B20491834CA660075B369 /* TestingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78B20481834CA660075B369 /* TestingViewController.m */; };
 		E78B204C1834CADC0075B369 /* GPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78B204B1834CADC0075B369 /* GPSViewController.m */; };
 		E78B204F1834CC660075B369 /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78B204E1834CC660075B369 /* FMDBViewController.m */; };
+		E78B206D1834E87E0075B369 /* libAdOn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E78B206A1834E87E0075B369 /* libAdOn.a */; };
+		E78B206F1834E8F90075B369 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78B206E1834E8F90075B369 /* MediaPlayer.framework */; };
+		E78B20721834E92D0075B369 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78B20701834E92C0075B369 /* AddressBook.framework */; };
+		E78B20731834E92D0075B369 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78B20711834E92D0075B369 /* AddressBookUI.framework */; };
+		E78B20751834E9550075B369 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78B20741834E9550075B369 /* CoreTelephony.framework */; };
+		E78B20771834E9690075B369 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78B20761834E9690075B369 /* EventKit.framework */; };
+		E78B20791834E9790075B369 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78B20781834E9790075B369 /* AssetsLibrary.framework */; };
+		E78B207B1834E98C0075B369 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78B207A1834E98C0075B369 /* CoreMotion.framework */; };
+		E78B207F1834ED1E0075B369 /* VponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78B207E1834ED1E0075B369 /* VponViewController.m */; };
+		E78B20821834ED300075B369 /* VponAdmobCustomAd.m in Sources */ = {isa = PBXBuildFile; fileRef = E78B20811834ED300075B369 /* VponAdmobCustomAd.m */; };
 		E792089A1830DEBD00B8D758 /* vocabulary.db in Resources */ = {isa = PBXBuildFile; fileRef = E79208991830DEBD00B8D758 /* vocabulary.db */; };
 		E792089C1830FDC500B8D758 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E792089B1830FDC500B8D758 /* libsqlite3.dylib */; };
 		E7BBB76E18289FB3000AA36D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBB76D18289FB3000AA36D /* AVFoundation.framework */; };
@@ -143,6 +153,26 @@
 		E78B204B1834CADC0075B369 /* GPSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSViewController.m; sourceTree = "<group>"; };
 		E78B204D1834CC660075B369 /* FMDBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
 		E78B204E1834CC660075B369 /* FMDBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
+		E78B206A1834E87E0075B369 /* libAdOn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdOn.a; sourceTree = "<group>"; };
+		E78B206B1834E87E0075B369 /* VponBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponBanner.h; sourceTree = "<group>"; };
+		E78B206C1834E87E0075B369 /* VponInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponInterstitial.h; sourceTree = "<group>"; };
+		E78B206E1834E8F90075B369 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E78B20701834E92C0075B369 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		E78B20711834E92D0075B369 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		E78B20741834E9550075B369 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E78B20761834E9690075B369 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		E78B20781834E9790075B369 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		E78B207A1834E98C0075B369 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		E78B207D1834ED1E0075B369 /* VponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponViewController.h; sourceTree = "<group>"; };
+		E78B207E1834ED1E0075B369 /* VponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponViewController.m; sourceTree = "<group>"; };
+		E78B20801834ED300075B369 /* VponAdmobCustomAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAdmobCustomAd.h; sourceTree = "<group>"; };
+		E78B20811834ED300075B369 /* VponAdmobCustomAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdmobCustomAd.m; sourceTree = "<group>"; };
+		E78B20841834EDB90075B369 /* GADCustomEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBanner.h; sourceTree = "<group>"; };
+		E78B20851834EDB90075B369 /* GADCustomEventBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBannerDelegate.h; sourceTree = "<group>"; };
+		E78B20861834EDB90075B369 /* GADCustomEventExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventExtras.h; sourceTree = "<group>"; };
+		E78B20871834EDB90075B369 /* GADCustomEventInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitial.h; sourceTree = "<group>"; };
+		E78B20881834EDB90075B369 /* GADCustomEventInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitialDelegate.h; sourceTree = "<group>"; };
+		E78B20891834EDB90075B369 /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
 		E79208991830DEBD00B8D758 /* vocabulary.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = vocabulary.db; sourceTree = "<group>"; };
 		E792089B1830FDC500B8D758 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E7BBB76D18289FB3000AA36D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -158,6 +188,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78B207B1834E98C0075B369 /* CoreMotion.framework in Frameworks */,
+				E78B20791834E9790075B369 /* AssetsLibrary.framework in Frameworks */,
+				E78B20771834E9690075B369 /* EventKit.framework in Frameworks */,
+				E78B20751834E9550075B369 /* CoreTelephony.framework in Frameworks */,
+				E78B20721834E92D0075B369 /* AddressBook.framework in Frameworks */,
+				E78B20731834E92D0075B369 /* AddressBookUI.framework in Frameworks */,
+				E78B206F1834E8F90075B369 /* MediaPlayer.framework in Frameworks */,
 				E78B20421834BA960075B369 /* StoreKit.framework in Frameworks */,
 				E78B20401834BA6F0075B369 /* AdSupport.framework in Frameworks */,
 				E76DA522182240D2008FC0CA /* CoreGraphics.framework in Frameworks */,
@@ -171,6 +208,7 @@
 				E76DA520182240D2008FC0CA /* Foundation.framework in Frameworks */,
 				DF9F84D5FB554C0881B7CDDA /* libPods.a in Frameworks */,
 				E78B20311834B8D60075B369 /* libGoogleAdMobAds.a in Frameworks */,
+				E78B206D1834E87E0075B369 /* libAdOn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +259,13 @@
 		E76DA51E182240D2008FC0CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E78B207A1834E98C0075B369 /* CoreMotion.framework */,
+				E78B20781834E9790075B369 /* AssetsLibrary.framework */,
+				E78B20761834E9690075B369 /* EventKit.framework */,
+				E78B20741834E9550075B369 /* CoreTelephony.framework */,
+				E78B20701834E92C0075B369 /* AddressBook.framework */,
+				E78B20711834E92D0075B369 /* AddressBookUI.framework */,
+				E78B206E1834E8F90075B369 /* MediaPlayer.framework */,
 				E78B20411834BA960075B369 /* StoreKit.framework */,
 				E78B203F1834BA6F0075B369 /* AdSupport.framework */,
 				E78B203D1834B93F0075B369 /* SystemConfiguration.framework */,
@@ -423,6 +468,7 @@
 		E78B1F4A1834B8D40075B369 /* Ads */ = {
 			isa = PBXGroup;
 			children = (
+				E78B20691834E87E0075B369 /* VponAd */,
 				E78B1F4B1834B8D40075B369 /* GoogleAdMobAdsSdkiOS-6.5.1 */,
 			);
 			path = Ads;
@@ -431,6 +477,7 @@
 		E78B1F4B1834B8D40075B369 /* GoogleAdMobAdsSdkiOS-6.5.1 */ = {
 			isa = PBXGroup;
 			children = (
+				E78B20831834EDB90075B369 /* Mediation */,
 				E78B1FD81834B8D50075B369 /* GADAdMobExtras.h */,
 				E78B1FD91834B8D50075B369 /* GADAdNetworkExtras.h */,
 				E78B1FDA1834B8D50075B369 /* GADAdSize.h */,
@@ -449,6 +496,7 @@
 		E78B20431834C6620075B369 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				E78B207C1834ED1E0075B369 /* Vpon */,
 				E78B20441834C68F0075B369 /* AdMobViewController.h */,
 				E78B20451834C68F0075B369 /* AdMobViewController.m */,
 				E78B20471834CA660075B369 /* TestingViewController.h */,
@@ -459,6 +507,41 @@
 				E78B204E1834CC660075B369 /* FMDBViewController.m */,
 			);
 			path = VCs;
+			sourceTree = "<group>";
+		};
+		E78B20691834E87E0075B369 /* VponAd */ = {
+			isa = PBXGroup;
+			children = (
+				E78B206A1834E87E0075B369 /* libAdOn.a */,
+				E78B206B1834E87E0075B369 /* VponBanner.h */,
+				E78B206C1834E87E0075B369 /* VponInterstitial.h */,
+			);
+			path = VponAd;
+			sourceTree = "<group>";
+		};
+		E78B207C1834ED1E0075B369 /* Vpon */ = {
+			isa = PBXGroup;
+			children = (
+				E78B20801834ED300075B369 /* VponAdmobCustomAd.h */,
+				E78B20811834ED300075B369 /* VponAdmobCustomAd.m */,
+				E78B207D1834ED1E0075B369 /* VponViewController.h */,
+				E78B207E1834ED1E0075B369 /* VponViewController.m */,
+			);
+			path = Vpon;
+			sourceTree = "<group>";
+		};
+		E78B20831834EDB90075B369 /* Mediation */ = {
+			isa = PBXGroup;
+			children = (
+				E78B20841834EDB90075B369 /* GADCustomEventBanner.h */,
+				E78B20851834EDB90075B369 /* GADCustomEventBannerDelegate.h */,
+				E78B20861834EDB90075B369 /* GADCustomEventExtras.h */,
+				E78B20871834EDB90075B369 /* GADCustomEventInterstitial.h */,
+				E78B20881834EDB90075B369 /* GADCustomEventInterstitialDelegate.h */,
+				E78B20891834EDB90075B369 /* GADCustomEventRequest.h */,
+			);
+			name = Mediation;
+			path = "Add-ons/Mediation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -597,7 +680,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76DA539182240D3008FC0CA /* ViewController.m in Sources */,
+				E78B207F1834ED1E0075B369 /* VponViewController.m in Sources */,
 				E7F5CC2D182BFD56001B93A1 /* ACGPSManager.m in Sources */,
+				E78B20821834ED300075B369 /* VponAdmobCustomAd.m in Sources */,
 				E76DA57E182387ED008FC0CA /* UIView+Position.m in Sources */,
 				E76DA56D18224224008FC0CA /* UIColor+NewColor.m in Sources */,
 				E76B0B33182AB3D80019BA4E /* ACAddressBookManager.m in Sources */,
@@ -765,6 +850,7 @@
 					"/Users/alan/Desktop/ACDemo/ACDemo/ACDemo/Ads/GoogleAdMobAdsSdkiOS-6.5.1/Add-ons/GoogleAnalyticsServicesiOS_3.0/GoogleAnalytics/Library",
 					"/Users/alan/Desktop/ACDemo/ACDemo/ACDemo/Ads/GoogleAdMobAdsSdkiOS-6.5.1/Add-ons/GoogleAnalyticsServicesiOS_3.0",
 					"/Users/alan/Desktop/ACDemo/ACDemo/ACDemo/Ads/GoogleAdMobAdsSdkiOS-6.5.1",
+					/Users/alan/Desktop/ACDemo/ACDemo/ACDemo/Ads/VponAd,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -786,6 +872,7 @@
 					"/Users/alan/Desktop/ACDemo/ACDemo/ACDemo/Ads/GoogleAdMobAdsSdkiOS-6.5.1/Add-ons/GoogleAnalyticsServicesiOS_3.0/GoogleAnalytics/Library",
 					"/Users/alan/Desktop/ACDemo/ACDemo/ACDemo/Ads/GoogleAdMobAdsSdkiOS-6.5.1/Add-ons/GoogleAnalyticsServicesiOS_3.0",
 					"/Users/alan/Desktop/ACDemo/ACDemo/ACDemo/Ads/GoogleAdMobAdsSdkiOS-6.5.1",
+					/Users/alan/Desktop/ACDemo/ACDemo/ACDemo/Ads/VponAd,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
