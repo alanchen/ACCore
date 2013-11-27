@@ -64,6 +64,7 @@
     self.bestEffortAtLocation = nil;
     
     [self stopUpdatingLocation];
+    _isUpdating=YES;
     [self.locationManager startUpdatingLocation];
     
     if([ACGPSManager isAccessible]){
@@ -75,6 +76,7 @@
 {
     [_timer invalidate];
     _timer = nil;
+    _isUpdating=NO;
     [self.locationManager stopUpdatingLocation];
 }
                   
