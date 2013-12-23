@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF9F84D5FB554C0881B7CDDA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD9DCE534DF4DAF83CDF51C /* libPods.a */; };
 		E73EA9591868068D00F1FB02 /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = E73EA9581868068D00F1FB02 /* NSTimer+Block.m */; };
+		E73EA95C1868078B00F1FB02 /* AppUpdateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E73EA95B1868078B00F1FB02 /* AppUpdateHelper.m */; };
 		E76B0B28182A236B0019BA4E /* ACPlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B0B27182A236B0019BA4E /* ACPlistManager.m */; };
 		E76B0B30182A8DE30019BA4E /* ACAddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B0B2F182A8DE30019BA4E /* ACAddressBookModel.m */; };
 		E76B0B33182AB3D80019BA4E /* ACAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B0B32182AB3D80019BA4E /* ACAddressBookManager.m */; };
@@ -82,6 +83,8 @@
 		5B1CD0DE98F64F579B14EF76 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E73EA9571868068D00F1FB02 /* NSTimer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Block.h"; sourceTree = "<group>"; };
 		E73EA9581868068D00F1FB02 /* NSTimer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Block.m"; sourceTree = "<group>"; };
+		E73EA95A1868078B00F1FB02 /* AppUpdateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUpdateHelper.h; sourceTree = "<group>"; };
+		E73EA95B1868078B00F1FB02 /* AppUpdateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUpdateHelper.m; sourceTree = "<group>"; };
 		E76B0B26182A236B0019BA4E /* ACPlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPlistManager.h; sourceTree = "<group>"; };
 		E76B0B27182A236B0019BA4E /* ACPlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPlistManager.m; sourceTree = "<group>"; };
 		E76B0B2E182A8DE20019BA4E /* ACAddressBookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAddressBookModel.h; sourceTree = "<group>"; };
@@ -466,6 +469,8 @@
 			isa = PBXGroup;
 			children = (
 				E76B0B2D182A8DA30019BA4E /* AddressBook */,
+				E73EA95A1868078B00F1FB02 /* AppUpdateHelper.h */,
+				E73EA95B1868078B00F1FB02 /* AppUpdateHelper.m */,
 				E76DA56A18224224008FC0CA /* ACDevTools.h */,
 				E76DA56B18224224008FC0CA /* ACDevTools.m */,
 				E76B0B26182A236B0019BA4E /* ACPlistManager.h */,
@@ -693,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76DA539182240D3008FC0CA /* ViewController.m in Sources */,
+				E73EA95C1868078B00F1FB02 /* AppUpdateHelper.m in Sources */,
 				E78B207F1834ED1E0075B369 /* VponViewController.m in Sources */,
 				E7F5CC2D182BFD56001B93A1 /* ACGPSManager.m in Sources */,
 				E78B20821834ED300075B369 /* VponAdmobCustomAd.m in Sources */,
