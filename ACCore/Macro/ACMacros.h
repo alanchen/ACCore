@@ -31,10 +31,11 @@
 
 #define IsRetinaDisplay [[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)]&&([UIScreen mainScreen].scale ==2.0)?1:0
 
+#define SystemVersion [[UIDevice currentDevice] systemVersion] floatValue]
+
 #define  ScreenWidth    [[UIScreen mainScreen] bounds].size.width
 #define  ScreenHeight   [[UIScreen mainScreen] bounds].size.height
 
 #define  StatusBarWidth     [[UIApplication sharedApplication] statusBarFrame].size.width
 #define  StatusBarHeight    [[UIApplication sharedApplication] statusBarFrame].size.height
-
 
