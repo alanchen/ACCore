@@ -38,39 +38,33 @@
     button.action = action;
 }
 
--(void)addTopRightButton:(UIButton *)button
+-(void)addTopRightView:(UIView *)view;
 {
-    [self addTopRightButtonItem:[[UIBarButtonItem alloc] initWithCustomView:button]];
+    [self addTopRightButtonItem:[[UIBarButtonItem alloc] initWithCustomView:view]];
 }
 
--(void)addTopLeftButton:(UIButton *)button
+-(void)addTopLeftView:(UIView *)view ;
 {
-    [self addTopLeftButtonItem:[[UIBarButtonItem alloc] initWithCustomView:button]];
+    [self addTopLeftButtonItem:[[UIBarButtonItem alloc] initWithCustomView:view]];
 }
 
--(void)addTopRightEmptyButton
+-(void)addTopRightEmpty
 {
-    [self addTopRightButton:[UIButton buttonWithType:UIButtonTypeCustom]];
+    [self addTopRightView:[UIButton buttonWithType:UIButtonTypeCustom]];
 }
 
--(void)addTopLeftEmptButton
+-(void)addTopLeftEmpty
 {
-    [self addTopLeftButton:[UIButton buttonWithType:UIButtonTypeCustom]];
+    [self addTopLeftView:[UIButton buttonWithType:UIButtonTypeCustom]];
 }
 
--(void)addTopRightButton:(UIButton *)button target:(id)target action:(SEL)action
+-(void)addTopRightView:(UIView *)view target:(id)target action:(SEL)action;
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0,0,button.width,button.height)];
-    [view addSubview:button];
-    
     [self addTopRightButtonItem:[[UIBarButtonItem alloc] initWithCustomView:view] target:target action:action];
 }
 
--(void)addTopLeftButton:(UIButton *)button target:(id)target action:(SEL)action
+-(void)addTopLeftView:(UIView *)view target:(id)target action:(SEL)action
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0,0,button.width,button.height)];
-    [view addSubview:button];
-    
     [self addTopLeftButtonItem:[[UIBarButtonItem alloc] initWithCustomView:view] target:target action:action];
 }
 

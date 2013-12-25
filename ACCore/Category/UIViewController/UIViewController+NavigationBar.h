@@ -16,13 +16,13 @@
 -(void)addTopRightButtonItem:(UIBarButtonItem *)button target:(id)target action:(SEL)action;
 -(void)addTopLeftButtonItem:(UIBarButtonItem *)button target:(id)target action:(SEL)action;
 
--(void)addTopRightButton:(UIButton *)button;
--(void)addTopLeftButton:(UIButton *)button ;
+-(void)addTopRightView:(UIView *)view;
+-(void)addTopLeftView:(UIView *)view ;
 
--(void)addTopRightEmptyButton;
--(void)addTopLeftEmptButton;
+-(void)addTopRightEmpty;
+-(void)addTopLeftEmpty;
 
--(void)addTopRightButton:(UIButton *)button target:(id)target action:(SEL)action;
--(void)addTopLeftButton:(UIButton *)button target:(id)target action:(SEL)action;
+-(void)addTopRightView:(UIView *)view target:(id)target action:(SEL)action;
+-(void)addTopLeftView:(UIView *)view target:(id)target action:(SEL)action;
 
 @end
