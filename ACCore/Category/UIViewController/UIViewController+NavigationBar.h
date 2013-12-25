@@ -10,19 +10,19 @@
 
 @interface UIViewController(NavigationBar)
 
+-(void)addTopRightEmpty;
+-(void)addTopLeftEmpty;
+
 -(void)addTopRightButtonItem:(UIBarButtonItem *)button;
 -(void)addTopLeftButtonItem:(UIBarButtonItem *)button;
 
 -(void)addTopRightButtonItem:(UIBarButtonItem *)button target:(id)target action:(SEL)action;
 -(void)addTopLeftButtonItem:(UIBarButtonItem *)button target:(id)target action:(SEL)action;
 
--(void)addTopRightView:(UIView *)view;
--(void)addTopLeftView:(UIView *)view ;
+-(void)addTopRightButton:(UIButton *)btn;
+-(void)addTopLeftButton:(UIButton *)btn ;
 
--(void)addTopRightEmpty;
--(void)addTopLeftEmpty;
-
--(void)addTopRightView:(UIView *)view target:(id)target action:(SEL)action;
--(void)addTopLeftView:(UIView *)view target:(id)target action:(SEL)action;
+-(void)addTopRightButton:(UIButton *)btn target:(id)target action:(SEL)action;
+-(void)addTopLeftButton:(UIButton *)btn target:(id)target action:(SEL)action;
 
 @end
