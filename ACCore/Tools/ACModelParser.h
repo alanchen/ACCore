@@ -15,4 +15,9 @@
 +(NSMutableArray *)parseList:(id)data toClass:(Class)className; // list only
 +(id)parseObject:(id)data toClass:(Class)className; // object only
 
++(NSMutableDictionary *) getPropertiesDictOfClass:(Class)className;
++(NSMutableDictionary *) getPropertiesDictOfClassIncludingSuperClass:(Class)className;
++(id) createModelOfClass:(Class)className withPropertiesDict:(id)propsInfo withOriginalData:(id)originalData;
+
+
 @end

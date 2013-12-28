@@ -48,8 +48,6 @@
     return model;
 }
 
-#pragma mark - private
-
 // value: type  key: property name
 +(NSMutableDictionary *) getPropertiesDictOfClass:(Class)className
 {
