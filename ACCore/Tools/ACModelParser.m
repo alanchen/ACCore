@@ -133,7 +133,7 @@
     
     [plist enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *propName = key;
-        id value = [self valueForKey:propName];
+        id value = [model valueForKey:propName];
         [result setObject:value forKey:propName];
     }];
     
