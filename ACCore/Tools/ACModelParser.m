@@ -134,7 +134,8 @@
     [plist enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *propName = key;
         id value = [model valueForKey:propName];
-        [result setObject:value forKey:propName];
+        if(value)
+            [result setObject:value forKey:propName];
     }];
     
     return [NSDictionary dictionaryWithDictionary:result];
