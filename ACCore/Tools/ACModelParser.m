@@ -124,6 +124,23 @@
     return model;
 }
 
+// value: property value  key: property name
++(NSDictionary *)convertModelToDictionary:(id)model;
+{
+    NSMutableDictionary *result = [@{} mutableCopy];
+    
+    NSMutableDictionary *plist = [ACModelParser getPropertiesDictOfClass:[model class]];
+    
+    [plist enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        NSString *propName = key;
+        id value = [self valueForKey:propName];
+        [result setObject:value forKey:propName];
+    }];
+    
+    return [NSDictionary dictionaryWithDictionary:result];
+}
+
+
 
 
 @end

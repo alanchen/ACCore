@@ -19,5 +19,6 @@
 +(NSMutableDictionary *) getPropertiesDictOfClassIncludingSuperClass:(Class)className;
 +(id) createModelOfClass:(Class)className withPropertiesDict:(id)propsInfo withOriginalData:(id)originalData;
 
++(NSDictionary *)convertModelToDictionary:(id)model;
 
 @end
