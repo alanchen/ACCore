@@ -24,6 +24,10 @@
 @property (nonatomic) CGSize size;
 @property (nonatomic) CGPoint point;
 
+@property (nonatomic) CGPoint topLeft;
+@property (nonatomic) CGPoint topRight;
 
+@property (nonatomic) CGPoint bottomLeft;
+@property (nonatomic) CGPoint bottomRight;
 
 @end

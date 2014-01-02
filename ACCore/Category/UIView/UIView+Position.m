@@ -128,5 +128,49 @@
     self.frame = frame;
 }
 
+-(CGPoint)topLeft
+{
+    return CGPointMake(self.left, self.top);
+}
+
+-(void)setTopLeft:(CGPoint)topLeft
+{
+    self.left = topLeft.x;
+    self.top = topLeft.y;
+}
+
+-(CGPoint)topRight
+{
+    return CGPointMake(self.right, self.top);
+}
+
+-(void)setTopRight:(CGPoint)topRight
+{
+    self.right = topRight.x;
+    self.top = topRight.y;
+}
+
+-(CGPoint)bottomLeft
+{
+    return CGPointMake(self.left, self.bottom);
+}
+
+-(void)setBottomLeft:(CGPoint)bottomLeft
+{
+    self.left = bottomLeft.x;
+    self.bottom = bottomLeft.y;
+}
+
+-(CGPoint)bottomRight
+{
+    return CGPointMake(self.right, self.bottom);
+}
+
+-(void)setBottomRight:(CGPoint)bottomRight
+{
+    self.right = bottomRight.x;
+    self.bottom = bottomRight.y;
+}
+
 
 @end
