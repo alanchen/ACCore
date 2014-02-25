@@ -10,6 +10,7 @@
 		DF9F84D5FB554C0881B7CDDA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD9DCE534DF4DAF83CDF51C /* libPods.a */; };
 		E73EA9591868068D00F1FB02 /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = E73EA9581868068D00F1FB02 /* NSTimer+Block.m */; };
 		E73EA95C1868078B00F1FB02 /* AppUpdateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E73EA95B1868078B00F1FB02 /* AppUpdateHelper.m */; };
+		E768E42218BC4FA600B127E2 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E768E42118BC4FA600B127E2 /* IAPHelper.m */; };
 		E76B0B28182A236B0019BA4E /* ACPlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B0B27182A236B0019BA4E /* ACPlistManager.m */; };
 		E76B0B30182A8DE30019BA4E /* ACAddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B0B2F182A8DE30019BA4E /* ACAddressBookModel.m */; };
 		E76B0B33182AB3D80019BA4E /* ACAddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B0B32182AB3D80019BA4E /* ACAddressBookManager.m */; };
@@ -62,6 +63,7 @@
 		E78B20821834ED300075B369 /* VponAdmobCustomAd.m in Sources */ = {isa = PBXBuildFile; fileRef = E78B20811834ED300075B369 /* VponAdmobCustomAd.m */; };
 		E792089A1830DEBD00B8D758 /* vocabulary.db in Resources */ = {isa = PBXBuildFile; fileRef = E79208991830DEBD00B8D758 /* vocabulary.db */; };
 		E792089C1830FDC500B8D758 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E792089B1830FDC500B8D758 /* libsqlite3.dylib */; };
+		E7B0391818BC8367001ED126 /* IAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B0391718BC8367001ED126 /* IAPViewController.m */; };
 		E7BBB76E18289FB3000AA36D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BBB76D18289FB3000AA36D /* AVFoundation.framework */; };
 		E7F5CC1B182B8A02001B93A1 /* ACModelParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F5CC1A182B8A02001B93A1 /* ACModelParser.m */; };
 		E7F5CC2D182BFD56001B93A1 /* ACGPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F5CC2C182BFD56001B93A1 /* ACGPSManager.m */; };
@@ -85,6 +87,8 @@
 		E73EA9581868068D00F1FB02 /* NSTimer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Block.m"; sourceTree = "<group>"; };
 		E73EA95A1868078B00F1FB02 /* AppUpdateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUpdateHelper.h; sourceTree = "<group>"; };
 		E73EA95B1868078B00F1FB02 /* AppUpdateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUpdateHelper.m; sourceTree = "<group>"; };
+		E768E42018BC4FA600B127E2 /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		E768E42118BC4FA600B127E2 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
 		E76B0B26182A236B0019BA4E /* ACPlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPlistManager.h; sourceTree = "<group>"; };
 		E76B0B27182A236B0019BA4E /* ACPlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPlistManager.m; sourceTree = "<group>"; };
 		E76B0B2E182A8DE20019BA4E /* ACAddressBookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAddressBookModel.h; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 		E78B20891834EDB90075B369 /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
 		E79208991830DEBD00B8D758 /* vocabulary.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = vocabulary.db; sourceTree = "<group>"; };
 		E792089B1830FDC500B8D758 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		E7B0391618BC8367001ED126 /* IAPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPViewController.h; sourceTree = "<group>"; };
+		E7B0391718BC8367001ED126 /* IAPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPViewController.m; sourceTree = "<group>"; };
 		E7BBB76D18289FB3000AA36D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E7F5CC19182B8A02001B93A1 /* ACModelParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACModelParser.h; sourceTree = "<group>"; };
 		E7F5CC1A182B8A02001B93A1 /* ACModelParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACModelParser.m; sourceTree = "<group>"; };
@@ -194,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78B20421834BA960075B369 /* StoreKit.framework in Frameworks */,
 				E78B207B1834E98C0075B369 /* CoreMotion.framework in Frameworks */,
 				E78B20791834E9790075B369 /* AssetsLibrary.framework in Frameworks */,
 				E78B20771834E9690075B369 /* EventKit.framework in Frameworks */,
@@ -201,7 +208,6 @@
 				E78B20721834E92D0075B369 /* AddressBook.framework in Frameworks */,
 				E78B20731834E92D0075B369 /* AddressBookUI.framework in Frameworks */,
 				E78B206F1834E8F90075B369 /* MediaPlayer.framework in Frameworks */,
-				E78B20421834BA960075B369 /* StoreKit.framework in Frameworks */,
 				E78B20401834BA6F0075B369 /* AdSupport.framework in Frameworks */,
 				E76DA522182240D2008FC0CA /* CoreGraphics.framework in Frameworks */,
 				E78B203E1834B93F0075B369 /* SystemConfiguration.framework in Frameworks */,
@@ -479,6 +485,8 @@
 				E7F5CC1A182B8A02001B93A1 /* ACModelParser.m */,
 				E7F5CC2B182BFD56001B93A1 /* ACGPSManager.h */,
 				E7F5CC2C182BFD56001B93A1 /* ACGPSManager.m */,
+				E768E42018BC4FA600B127E2 /* IAPHelper.h */,
+				E768E42118BC4FA600B127E2 /* IAPHelper.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -523,6 +531,8 @@
 				E78B204B1834CADC0075B369 /* GPSViewController.m */,
 				E78B204D1834CC660075B369 /* FMDBViewController.h */,
 				E78B204E1834CC660075B369 /* FMDBViewController.m */,
+				E7B0391618BC8367001ED126 /* IAPViewController.h */,
+				E7B0391718BC8367001ED126 /* IAPViewController.m */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -712,11 +722,13 @@
 				E76DA574182253B7008FC0CA /* NSDate+Display.m in Sources */,
 				E76B0B30182A8DE30019BA4E /* ACAddressBookModel.m in Sources */,
 				E76DA57B1823863F008FC0CA /* UIButton+Common.m in Sources */,
+				E7B0391818BC8367001ED126 /* IAPViewController.m in Sources */,
 				E76DA571182245B9008FC0CA /* NSDate+Comparison.m in Sources */,
 				E76DA581182388B5008FC0CA /* UIView+Common.m in Sources */,
 				E78B20491834CA660075B369 /* TestingViewController.m in Sources */,
 				E76DA56E18224224008FC0CA /* ACDevTools.m in Sources */,
 				E76DA52C182240D2008FC0CA /* main.m in Sources */,
+				E768E42218BC4FA600B127E2 /* IAPHelper.m in Sources */,
 				E76DA57818238342008FC0CA /* NSString+Common.m in Sources */,
 				E76DA58718238AAD008FC0CA /* UIViewController+Common.m in Sources */,
 				E76DA56C18224224008FC0CA /* NSArray+ACComon.m in Sources */,

@@ -14,6 +14,7 @@
 #import "GPSViewController.h"
 #import "FMDBViewController.h"
 #import "VponViewController.h"
+#import "IAPViewController.h"
 
 @interface ViewController ()
 
@@ -28,7 +29,7 @@
     [super viewDidLoad];
     self.title = @"ACDemo";
     
-    _array = [NSMutableArray arrayWithObjects:@"Test" ,@"GPS",@"FMDB", @"ADMob",@"Vpon",nil];
+    _array = [NSMutableArray arrayWithObjects:@"Test" ,@"GPS",@"FMDB", @"ADMob",@"Vpon",@"IAP",nil];
 }
 
 -(void)speak:(NSString *)str
@@ -64,8 +65,8 @@
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSString *str= [_array objectAtIndex:indexPath.row];
-    [self speak:str];
+//    NSString *str= [_array objectAtIndex:indexPath.row];
+//    [self speak:str];
     
     if(indexPath.row ==0)
     {
@@ -92,8 +93,11 @@
         VponViewController *vc= [[VponViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-
-
+    else if(indexPath.row ==5)
+    {
+        IAPViewController *vc = [[IAPViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 

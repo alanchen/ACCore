@@ -13,6 +13,7 @@
 #import "ACAddressBookManager.h"
 #import "ACModelParser.h"
 #import "ACGPSManager.h"
+#import "IAPHelper.h"
 
 #import "NSArray+ACComon.h"
 
@@ -31,3 +32,4 @@
 #import "UIViewController+Common.h"
 
 #import "NSTimer+Block.h"
+
