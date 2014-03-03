@@ -22,3 +22,9 @@
 +(NSDictionary *)convertModelToDictionary:(id)model;
 
 @end
+
+
+// Object which is subclass of ACModel will be parsed automatically.
+@interface ACModel : NSObject
+
+@end

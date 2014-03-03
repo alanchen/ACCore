@@ -8,6 +8,12 @@
 
 #import "ACModelParser.h"
 
+
+@implementation ACModel
+
+
+@end
+
 @implementation ACModelParser
 
 +(id)parse:(id)data toClass:(Class)className
@@ -114,6 +120,10 @@
        
         if([propClass isKindOfClass:[NSString class]] && data==nil){
             data=@"";
+        }
+        
+        if([propClass isKindOfClass:[ACModel class]]){
+            data = [self parseObject:data toClass:propClass] ;
         }
         
         if(data){
