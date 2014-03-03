@@ -122,7 +122,7 @@
             data=@"";
         }
         
-        if([propClass isKindOfClass:[ACModel class]]){
+        if([propClass isSubclassOfClass:[ACModel class]] || [propClass isKindOfClass:[ACModel class]]){
             data = [self parseObject:data toClass:propClass] ;
         }
         
