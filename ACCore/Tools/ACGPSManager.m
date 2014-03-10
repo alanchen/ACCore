@@ -96,6 +96,9 @@
 {
     [self stopUpdatingLocation];
     NotificationPost(GPSManagerNotificationDidTimeout, self.bestEffortAtLocation);
+    
+    if([_delegate respondsToSelector:@selector(GPSDelegateDidTimeout)])
+        [_delegate GPSDelegateDidTimeout];
 }
 
 #pragma mark -  CLLocationManager Delegate
@@ -136,6 +139,9 @@
         // IMPORTANT!!! Minimize power usage by stopping the location manager as soon as possible.
         [self stopUpdatingLocation];
         NotificationPost(GPSManagerNotificationDidUpdate, newLocation);
+        
+        if([_delegate respondsToSelector:@selector(GPSDelegateDidUpdated)])
+            [_delegate GPSDelegateDidUpdated];
     }
 }
 
@@ -170,6 +176,9 @@
     NSLog(@"GPS Error : %@",errorString);
     [self stopUpdatingLocation];
     NotificationPost(GPSManagerNotificationDidFail, error);
+    
+    if([_delegate respondsToSelector:@selector(GPSDelegateDidFailed:)])
+        [_delegate GPSDelegateDidFailed:error];
 }
 
 

@@ -13,6 +13,15 @@ static NSString *GPSManagerNotificationDidUpdate    = @"GPSManagerNotificationDi
 static NSString *GPSManagerNotificationDidTimeout   = @"GPSManagerNotificationDidTimeout";
 static NSString *GPSManagerNotificationDidFail      = @"GPSManagerNotificationDidFail";
 
+@protocol GPSManagerDelegate <NSObject>
+
+@optional
+-(void)GPSDelegateDidUpdated;
+-(void)GPSDelegateDidTimeout;
+-(void)GPSDelegateDidFailed:(NSError *)error;
+
+@end
+
 @interface ACGPSManager : NSObject
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -24,6 +33,8 @@ static NSString *GPSManagerNotificationDidFail      = @"GPSManagerNotificationDi
 @property (nonatomic,readonly) float bestLongitude;
 
 @property (nonatomic,readonly) BOOL isUpdating;
+
+@property (nonatomic,weak)id <GPSManagerDelegate> delegate;
 
 +(ACGPSManager *)sharedInstance;
 +(BOOL)isAccessible;
