@@ -144,7 +144,8 @@
     [plist enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         
         NSString *propName = key;
-        Class propClass = NSClassFromString(propName);
+        NSString *propType=[plist objectForKey:propName];
+        Class propClass = NSClassFromString(propType);
         
         id value = [model valueForKey:propName];
         
@@ -157,6 +158,7 @@
     
     return [NSDictionary dictionaryWithDictionary:result];
 }
+
 
 
 
