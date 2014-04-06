@@ -142,8 +142,15 @@
     NSMutableDictionary *plist = [ACModelParser getPropertiesDictOfClass:[model class]];
     
     [plist enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        
         NSString *propName = key;
+        Class propClass = NSClassFromString(propName);
+        
         id value = [model valueForKey:propName];
+        
+        if([propClass isSubclassOfClass:[ACModel class]] || [propClass isKindOfClass:[ACModel class]]){
+            value = [self convertModelToDictionary:value] ;}
+        
         if(value)
             [result setObject:value forKey:propName];
     }];
