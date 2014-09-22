@@ -29,7 +29,7 @@
 
 +(BOOL)isAccessible
 {
-    BOOL accessGranted = [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized;
+    BOOL accessGranted = [CLLocationManager authorizationStatus] >= kCLAuthorizationStatusAuthorized;
     return accessGranted;
 }
 
@@ -61,6 +61,10 @@
 
 -(void)startUpdatingLocation
 {
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager performSelector:@selector(requestWhenInUseAuthorization)];
+    }
+    
     self.bestEffortAtLocation = nil;
     
     [self stopUpdatingLocation];
