@@ -61,8 +61,8 @@
 
 -(void)startUpdatingLocation
 {
-    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
-        [self.locationManager performSelector:@selector(requestAlwaysAuthorization)];
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager performSelector:@selector(requestWhenInUseAuthorization)];
     }
     
     self.bestEffortAtLocation = nil;
