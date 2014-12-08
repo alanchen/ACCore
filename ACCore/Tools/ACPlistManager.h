@@ -11,6 +11,7 @@
 @interface ACPlistManager : NSObject
 
 +(ACPlistManager *)sharedInstance;
+-(NSString *)plistsRootPath;
 -(NSArray *)allExistedFiles;
 
 -(BOOL) writeObject:(id)obj toPlist:(NSString*)plistName;

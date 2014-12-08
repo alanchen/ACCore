@@ -30,16 +30,16 @@
     {        
         ///Users/alan/Library/Application Support/iPhone Simulator/7.0.3-64/Applications/61DFFEEC-190C-43A5-9433-267112F535B9/Documents/plists
         
-        NSString *plistsRootPath =  [ACPlistManager plistsRootPath];
+        NSString *plistsRootPath =  [self plistsRootPath];
         [ACPlistManager createFolderIfNeed:plistsRootPath];
     }
     
     return self;
 }
 
-+(NSString *)plistsRootPath
+-(NSString *)plistsRootPath
 {
-    return [[self documentsDirectoryPath] stringByAppendingPathComponent:@"plists"];
+    return [[ACPlistManager documentsDirectoryPath] stringByAppendingPathComponent:@"plists"];
 }
 
 +(NSString *)documentsDirectoryPath
@@ -76,7 +76,7 @@
 
 -(NSArray *)allExistedFiles
 {
-    NSDirectoryEnumerator *direnum = [[NSFileManager defaultManager] enumeratorAtPath:[ACPlistManager plistsRootPath]];
+    NSDirectoryEnumerator *direnum = [[NSFileManager defaultManager] enumeratorAtPath:[self plistsRootPath]];
     
     NSMutableArray *array= [NSMutableArray array];
     NSString *filename;
@@ -84,7 +84,7 @@
     while ((filename = [direnum nextObject])) {
         if ([filename hasSuffix:@"plist"])
         {
-            [array addObject:[[ACPlistManager plistsRootPath] stringByAppendingPathComponent:filename]];
+            [array addObject:[[self plistsRootPath] stringByAppendingPathComponent:filename]];
         }
     }
     
@@ -97,7 +97,7 @@
         plistName = [plistName stringByAppendingPathExtension:@"plist"];
     }
     
-    NSString *plistsRootPath =  [ACPlistManager plistsRootPath];
+    NSString *plistsRootPath =  [self plistsRootPath];
     NSString *path = [plistsRootPath stringByAppendingPathComponent:plistName];
     
     if([obj respondsToSelector:@selector(writeToFile: atomically:)] && path)
@@ -114,7 +114,7 @@
         plistName = [plistName stringByAppendingPathExtension:@"plist"];
     }
     
-    NSString *path =  [[ACPlistManager plistsRootPath] stringByAppendingPathComponent:plistName];
+    NSString *path =  [[self plistsRootPath] stringByAppendingPathComponent:plistName];
     
     BOOL isFileExist = [[NSFileManager defaultManager] fileExistsAtPath:path];
     NSArray *array =  nil;
@@ -133,7 +133,7 @@
         plistName = [plistName stringByAppendingPathExtension:@"plist"];
     }
     
-    NSString *path =  [[ACPlistManager plistsRootPath] stringByAppendingPathComponent:plistName];
+    NSString *path =  [[self plistsRootPath] stringByAppendingPathComponent:plistName];
     
     BOOL isFileExist = [[NSFileManager defaultManager] fileExistsAtPath:path];
     NSDictionary *dict =  nil;
@@ -151,7 +151,7 @@
         plistName = [plistName stringByAppendingPathExtension:@"plist"];
     }
     
-    NSString *path = [[ACPlistManager plistsRootPath] stringByAppendingPathComponent:plistName];
+    NSString *path = [[self plistsRootPath] stringByAppendingPathComponent:plistName];
     
     if ([[NSFileManager defaultManager] isDeletableFileAtPath:path]) {
         return [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
